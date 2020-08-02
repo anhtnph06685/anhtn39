@@ -72,19 +72,19 @@ public class ProductResource {
             return ResponseUtil.generateErrorResponse(e);
         }
     }
-    @PostMapping("/get-all")
-    public ResponseEntity<BaseDataResponse<GetAllProductResponse>> getAll(
-            @RequestBody BaseDataRequest<GetAllProductRequest> request
-    ){
-        try {
-            GetAllProductResponse response = productService.getAllProduct(request.getBody());
-            return ResponseUtil.wrap(response);
-        }
-        catch (ServiceException e){
-            return ResponseUtil.generateErrorResponse(e);
-        }
-        catch (Exception e){
-            return ResponseUtil.generateErrorResponse(e);
-        }
-    }
+//    @PostMapping("/get-all")
+//    public ResponseEntity<BaseDataResponse<GetAllProductResponse>> getAll(
+//            @RequestBody BaseDataRequest<GetAllProductRequest> request
+//    ){
+//        try {
+//            GetAllProductResponse response = productService.getAllProduct(request.getBody());
+//            return ResponseUtil.wrap(response);
+//        }
+//        catch (ServiceException e){
+//            return ResponseUtil.generateErrorResponse(e);
+//        }
+//        catch (Exception e){
+//            return ResponseUtil.generateErrorResponse(e);
+//        }
+//    }
 }
